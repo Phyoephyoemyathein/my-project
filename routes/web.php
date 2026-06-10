@@ -59,6 +59,8 @@ Route::post('/forgot-password', [PasswordResetController::class, 'updateDirectly
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    Route::put('/users/{id}', [AdminController::class, 'update'])->name('admin.users.update');
+    Route::delete('/users/{id}', [AdminController::class, 'destroy'])->name('admin.users.destroy');
     
     // [အရေးကြီး ပြင်ဆင်မှု] Register ခလုတ်ကို Admin ဝင်ထားမှသာ အကောင့်ဖွင့်ပေးနိုင်ရန် Guest ထဲကနေ Admin Group ထဲကို ရွှေ့လိုက်ပါတယ်
     Route::get('/register', [AuthController::class, 'showRegister'])->name('register');

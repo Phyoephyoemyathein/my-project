@@ -53,4 +53,19 @@ class AdminController extends Controller
         $users = User::paginate(10); // User အားလုံးကို ဆွဲထုတ်မယ်
         return view('admin.users', compact('users')); // 'users' variable ကိုပို့မယ်
     }
+
+    public function update(Request $request, $id) {
+        $user = User::findOrFail($id);
+        $request->validate([
+            'role' => 'required|in:admin,user',
+        ]);
+        $user->update(['role' => $request->role]);
+        return redirect()->back()->with('success', 'User role updated successfully!');
+    }
+    
+    public function destroy($id) {
+        $user = User::findOrFail($id);
+        $user->delete();
+        return back()->with('success', 'User deleted!');
+    }
 }

@@ -35,7 +35,15 @@
             </div>
         </div>
     </header>
-
+    
+    @if(session('success'))
+    <div id="success-alert" class="mb-6 p-4 rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-between">
+        <span>{{ session('success') }}</span>
+        <button onclick="document.getElementById('success-alert').remove()" class="text-emerald-400">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+@endif
     <main class="mx-auto max-w-7xl px-6 py-10">
         
         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
@@ -60,6 +68,7 @@
                             <th class="px-6 py-4">Email Address</th>
                             <th class="px-6 py-4">Role</th>
                             <th class="px-6 py-4">Registered Date</th>
+                            <th class="px-6 py-4">Actions</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-800/60 text-sm text-slate-300">
@@ -93,6 +102,17 @@
                                 <td class="px-6 py-4 text-xs text-slate-400">
                                     {{ $user->created_at->format('d M Y (h:i A)') }}
                                 </td>
+                                <td class="px-6 py-4 flex gap-3">
+    <button onclick="openEditUser('{{ $user->id }}', '{{ $user->role }}', '{{ route('admin.users.update', $user->id) }}')" 
+            class="text-blue-400 hover:text-blue-300 transition-colors">
+        <i class="fa-solid fa-edit"></i>
+    </button>
+    
+    <button onclick="openDeleteUser('{{ route('admin.users.destroy', $user->id) }}')" 
+            class="text-red-400 hover:text-red-300 transition-colors">
+        <i class="fa-solid fa-trash-can"></i>
+    </button>
+</td>
                             </tr>
                         @empty
                             <tr>
@@ -115,4 +135,48 @@
     </main>
 
 </body>
+<div id="editUserModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-slate-900 p-6 rounded-xl w-full max-w-sm border border-slate-700 shadow-2xl">
+        <h3 class="text-white text-lg font-semibold mb-4">Edit User Role</h3>
+        <form id="editUserForm" method="POST">
+            @csrf @method('PUT')
+            <label class="text-slate-400 text-xs uppercase font-bold block mb-2">Select New Role</label>
+            <select name="role" class="w-full p-2.5 bg-slate-800 border border-slate-700 text-white rounded mb-6">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+            <div class="flex justify-end gap-3">
+                <button type="button" onclick="document.getElementById('editUserModal').classList.add('hidden')" class="px-4 py-2 text-slate-400">Cancel</button>
+                <button type="submit" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="deleteUserModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div class="bg-slate-900 p-6 rounded-xl w-full max-w-sm border border-slate-700 shadow-2xl text-center">
+        <div class="text-red-500 text-4xl mb-4"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h3 class="text-white text-lg font-semibold mb-2">Delete User?</h3>
+        <p class="text-slate-400 mb-6 text-sm">This action cannot be undone.</p>
+        <form id="deleteUserForm" method="POST">
+            @csrf @method('DELETE')
+            <div class="flex justify-center gap-3">
+                <button type="button" onclick="document.getElementById('deleteUserModal').classList.add('hidden')" class="px-4 py-2 text-slate-400">Cancel</button>
+                <button type="submit" class="px-6 py-2 bg-red-600 hover:bg-red-500 text-white rounded-lg">Confirm Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function openEditUser(id, currentRole, url) {
+    document.getElementById('editUserForm').action = url;
+    document.getElementById('editUserForm').querySelector('select').value = currentRole;
+    document.getElementById('editUserModal').classList.remove('hidden');
+}
+function openDeleteUser(url) {
+    document.getElementById('deleteUserForm').action = url;
+    document.getElementById('deleteUserModal').classList.remove('hidden');
+}
+</script>
 </html>
