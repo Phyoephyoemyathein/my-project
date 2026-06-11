@@ -1,58 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Laptop Service & Computer Shop System
+This is a Full-Stack Web Application built with Laravel and Tailwind CSS. It provides a comprehensive solution for managing laptop service center operations and an e-commerce interface for computer components.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🌟 Project Overview
+The system is divided into two main modules:
 
-## About Laravel
+1.Admin Dashboard: Allows administrators to manage registered users, update roles (Admin/User), and perform CRUD operations.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2.Product Shop Interface: Displays computer products categorized by type (Laptops, CPUs, Monitors, etc.), allowing users to browse items easily.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+🚀 Key Features
+•Role-Based Access Control (RBAC): Restricts access based on user roles (Admin vs. User).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+•User Management: Admins can view, edit, and delete registered members directly from the dashboard.
 
-## Learning Laravel
+•Dynamic Product Catalog: Categorized product listings for better navigation.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+•Modern UI/UX: Built with Tailwind CSS for a responsive, clean, and professional appearance across all devices.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+•Secure Authentication: Implemented with Laravel’s built-in authentication and CSRF protection to ensure data security.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+🛠 Technologies Used
+•Backend: PHP (Laravel Framework)
 
-## Agentic Development
+•Frontend: Tailwind CSS, Blade Templates
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+•Database: MySQL
+
+•Version Control: Git & GitHub
+
+## 📋 Installation
+To run this project on your local machine, follow these steps:
 
 ```bash
-composer require laravel/boost --dev
+# 1. Clone the repository
+git clone https://github.com/Phyoephyoemyathein/my-project.git
 
-php artisan boost:install
-```
+# 2. Install dependencies
+composer install
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+# 3. Create .env file and generate app key
+cp .env.example .env
+php artisan key:generate
 
-## Contributing
+# 4. Migrate the database
+php artisan migrate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# 5. Serve the application
+php artisan serve
 
-## Code of Conduct
+🤝 Contact
+If you have any questions or would like to collaborate, feel free to reach out.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Developed by Phyoe Phyo Mya Thein
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
