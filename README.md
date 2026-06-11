@@ -32,20 +32,11 @@ The system is divided into two main modules:
 To run this project on your local machine, follow these steps:
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/Phyoephyoemyathein/my-project.git
-
-# 2. Install dependencies
+git clone [https://github.com/Phyoephyoemyathein/my-project.git](https://github.com/Phyoephyoemyathein/my-project.git)
 composer install
-
-# 3. Create .env file and generate app key
 cp .env.example .env
 php artisan key:generate
-
-# 4. Migrate the database
 php artisan migrate
-
-# 5. Serve the application
 php artisan serve
 
 
