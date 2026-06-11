@@ -1,13 +1,13 @@
 # Laptop Service & Computer Shop System
 
-ဤသည်မှာ Laravel နှင့် Tailwind CSS ကိုအသုံးပြု၍ တည်ဆောက်ထားသော Full-Stack Web Application ဖြစ်ပါသည်။
+This is a Full-Stack Web Application built with Laravel and Tailwind CSS, designed to manage laptop service operations and provide a seamless shopping experience for computer components.
 
 ## 🚀 Key Features
 
-* **Role-Based Access:** Admin နှင့် User အဆင့်အလိုက် ခွဲခြားထားခြင်း။
-* **User Management:** အသုံးပြုသူများအား စနစ်တကျ စီမံခန့်ခွဲခြင်း။
-* **Product Catalog:** ပစ္စည်းအမျိုးအစားအလိုက် ရှာဖွေနိုင်ခြင်း။
-* **Modern UI:** Tailwind CSS ဖြင့် ခေတ်မီအောင် တည်ဆောက်ထားခြင်း။
+* **Role-Based Access:** Secure access control for Admin and User roles.
+* **User Management:** Efficiently manage and organize user accounts.
+* **Product Catalog:** Browse and filter products by categories (CPU, Laptops, Monitors, etc.).
+* **Modern UI:** Responsive and user-friendly interface powered by Tailwind CSS.
 
 ## 🛠 Technologies Used
 
