@@ -26,15 +26,4 @@ composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
-php artisan serve '''
-
-## 🤝 Contact
-
-If you have any questions, suggestions, or would like to collaborate, feel free to reach out to me!
-
-* **GitHub:** [Phyoephyoemyathein](https://github.com/Phyoephyoemyathein)
-* **Email:** [your-email@example.com]
-* **LinkedIn:** [Your LinkedIn Profile Link]
-
----
-*Developed by Phyoe Phyo Mya Thein*
+php artisan serve
