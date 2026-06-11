@@ -48,6 +48,8 @@ php artisan migrate
 # 5. Serve the application
 php artisan serve
 
+
+
 🤝 Contact
 If you have any questions or would like to collaborate, feel free to reach out.
 
