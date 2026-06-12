@@ -26,8 +26,8 @@ composer install
 cp .env.example .env
 php artisan key:generate
 php artisan migrate
-php artisan serve'''
-
+php artisan serve
+```
 
 ##🤝 Contact
 If you have any questions, suggestions, or would like to collaborate, feel free to reach out to me!
