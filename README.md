@@ -29,7 +29,7 @@ php artisan migrate
 php artisan serve
 ```
 
-##🤝 Contact
+## 🤝 Contact
 If you have any questions, suggestions, or would like to collaborate, feel free to reach out to me!
 
 GitHub: Phyoephyoemyathein
