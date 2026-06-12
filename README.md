@@ -40,7 +40,7 @@ LinkedIn:[ linkedin.com/in/phyophyomyathein96](https://www.linkedin.com/in/phyop
 
 ## 📸 Project Screenshots
 
-![Dashboard](images/admin-dashboard.png)
+![Dashboard](images/welcome_page.png)
 ![Login Page](images/login-page.png)
 
 ---
