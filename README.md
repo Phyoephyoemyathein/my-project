@@ -41,7 +41,12 @@ LinkedIn:[ linkedin.com/in/phyophyomyathein96](https://www.linkedin.com/in/phyop
 ## 📸 Project Screenshots
 
 ![Dashboard](images/welcome_page.png)
-![Login Page](images/login-page.png)
+![Login Page](images/login_page.png)
+![Forgot Password Page](images/resetpw_page.png)
+![User Page](images/user_page.png)
+![Register Page](images/register_page.png)
+![Registered List Page](images/reuser_page.png)
+![Admin Page](images/admin_page.png)
 
 ---
 *Developed by Phyoe Phyo Mya Thein*
